@@ -1,0 +1,12 @@
+// Recursive function to display the linked list in reverse order
+void displayReverse(Node* head) {
+     // Base case: If the list is empty, return
+     if (head == NULL)
+         return;
+
+     // Recursive call with the next node
+     displayReverse(head->next);
+
+     // Print the current node's value after returning from recursion
+     cout << head->val << " ";
+}
